@@ -1,0 +1,189 @@
+/* ============================= */
+/* MAIN APP CARD */
+/* ============================= */
+.app {
+  position: relative;
+  width: 90%;
+  max-width: 900px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px;
+  text-align: center;
+  color: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+/* ============================= */
+/* FLOATING COLOR SPLASH EFFECT */
+/* ============================= */
+.app::before,
+.app::after {
+  content: "";
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  filter: blur(90px);
+  z-index: -1;
+  animation: float 6s ease-in-out infinite;
+}
+
+.app::before {
+  background: #ff4081;
+  top: -40px;
+  left: -40px;
+}
+
+.app::after {
+  background: #40c4ff;
+  bottom: -40px;
+  right: -40px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0); }
+}
+
+/* ============================= */
+/* HERO SECTION */
+/* ============================= */
+.hero h1 {
+  font-size: 40px;
+  margin-bottom: 10px;
+  animation: bounce 2s infinite;
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+/* ============================= */
+/* WISHES SECTION */
+/* ============================= */
+.wishes {
+  margin: 30px 0;
+}
+
+.buttons button {
+  margin: 8px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  background: white;
+  color: #ff4081;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.buttons button:hover {
+  background: #ff4081;
+  color: white;
+  transform: scale(1.05);
+}
+
+.message {
+  margin-top: 20px;
+  font-size: 18px;
+  font-weight: 500;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ============================= */
+/* PLAYLIST BUTTON */
+/* ============================= */
+.playlist-btn {
+  margin-top: 20px;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  background: linear-gradient(45deg, #ff512f, #dd2476);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.playlist-btn:hover {
+  transform: scale(1.08);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* ============================= */
+/* PLAYLIST SECTION */
+/* ============================= */
+.playlist {
+  margin-top: 30px;
+}
+
+.playlist h2 {
+  margin-bottom: 20px;
+}
+
+/* Smooth Slide Animation */
+.playlist-wrapper {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.5s ease;
+  opacity: 0;
+}
+
+.playlist-wrapper.show {
+  max-height: 2000px;
+  opacity: 1;
+}
+
+/* ============================= */
+/* VIDEO CARD */
+/* ============================= */
+.video-card {
+  margin: 20px 0;
+  transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+  transform: scale(1.03);
+}
+
+.playlist iframe {
+  width: 100%;
+  max-width: 600px;
+  height: 320px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================= */
+/* RESPONSIVE DESIGN */
+/* ============================= */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 28px;
+  }
+
+  .playlist iframe {
+    height: 220px;
+  }
+
+  .app {
+    padding: 25px;
+  }
+}

@@ -1,0 +1,39 @@
+/* ============================= */
+/* RESET */
+/* ============================= */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ============================= */
+/* BODY STYLING */
+/* ============================= */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff6a00, #ee0979, #00c9ff, #92fe9d);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  min-height: 100vh;
+
+  /* Better center handling */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Smooth font rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================= */
+/* GRADIENT ANIMATION */
+/* ============================= */
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
