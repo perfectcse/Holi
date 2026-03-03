@@ -43,7 +43,8 @@ npm run dev
 * CSS Animations & Transitions
 * Production Build Optimization
 
-![alt text](image.png)
+<img width="469" height="318" alt="image" src="https://github.com/user-attachments/assets/ab71199e-4170-4cc8-8222-3b81b3d5bdf5" />
+
 
 👨‍💻 Author
 Vishal
